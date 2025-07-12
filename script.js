@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle
+
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -7,7 +7,7 @@ navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -55,7 +55,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
+
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.skill-card, .project-card, .stat');
     animatedElements.forEach(el => {
@@ -69,7 +69,7 @@ const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form data
+
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
@@ -103,7 +103,7 @@ contactForm.addEventListener('submit', (e) => {
     }, 2000);
 });
 
-// Typing animation for hero title
+
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -119,14 +119,13 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing animation when page loads
+
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-title');
     const originalText = heroTitle.textContent;
     typeWriter(heroTitle, originalText, 50);
 });
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -148,7 +147,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Skills progress animation
+
 function animateSkillBars() {
     const skillCards = document.querySelectorAll('.skill-card');
     
@@ -160,7 +159,7 @@ function animateSkillBars() {
     });
 }
 
-// Trigger skill animation when skills section is visible
+
 const skillsSection = document.querySelector('.skills');
 const skillsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
